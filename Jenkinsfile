@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label: 'wn'}
 
     stages {
         stage('Debug Environment') {
