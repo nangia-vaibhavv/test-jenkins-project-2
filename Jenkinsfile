@@ -47,7 +47,7 @@ pipeline {
                 sh 'docker run vn2001/testjenkinsproject2:latest'
             }
         }
-        stage('Docker push')
+        stage('Docker push') {
             steps {
                 echo('docker push')
                 sh 'docker push vn2001/testjenkinsproject2:latest'
