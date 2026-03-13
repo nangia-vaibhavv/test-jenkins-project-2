@@ -1,6 +1,13 @@
 pipeline {
     agent any
     stages {
+        stage('Debug Environment') {
+            steps {
+                sh 'java -version'
+                sh 'mvn -version'
+                sh 'echo $JAVA_HOME'
+            }
+        }
         stage('Build') {
             steps {
                 echo('Build started')
